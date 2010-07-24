@@ -1,0 +1,39 @@
+NAME
+    Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else
+    works, pull in hand-crafted metadata from a specified file.
+
+VERSION
+    version 1.10034201
+
+ROLES
+  Dist::Zilla::Role::MetaProvider::Provider
+PLUGIN FIELDS
+  file
+   type: required, ro, Str
+  reader_name
+   type: ClassName, ro.
+   default: Config::INI::Reader
+PRIVATE PLUGIN FIELDS
+  _reader
+   type: Object, ro, built from "reader_name"
+ROLE SATISFYING METHODS
+  provides
+    A conformant function to the Dist::Zila::Role::MetaProvider::Provider
+    Role.
+
+   signature: $plugin->provides()
+   returns: Array of Dist::Zilla::MetaProvides::ProvideRecord
+BUILDER METHODS
+  _build__reader
+SEE ALSO
+    *   Dist::Zilla::Plugin::MetaProvides
+
+AUTHOR
+    Kent Fredric <kentnl@cpan.org>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2010 by Kent Fredric.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
