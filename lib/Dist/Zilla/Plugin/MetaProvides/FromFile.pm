@@ -1,17 +1,16 @@
 use strict;
 use warnings;
+
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
 #
 # $Id:$
 use Moose;
-use MooseX::Has::Sugar;
-use MooseX::Types::Moose (':all');
 use Moose::Autobox;
 use Carp                ();
 use Config::INI::Reader ();
-use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
+use Dist::Zilla::MetaProvides::ProvideRecord;
 
 =head1 ROLES
 
@@ -30,7 +29,7 @@ with 'Dist::Zilla::Role::MetaProvider::Provider';
 
 =cut
 
-has file        => ( isa => Str,       ro, required, );
+has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 =head2 reader_name
 
@@ -40,8 +39,7 @@ has file        => ( isa => Str,       ro, required, );
 
 =cut
 
-has reader_name => ( isa => ClassName, ro, default => 'Config::INI::Reader', );
-
+has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
 
 =head1 PRIVATE PLUGIN FIELDS
 
@@ -51,7 +49,7 @@ has reader_name => ( isa => ClassName, ro, default => 'Config::INI::Reader', );
 
 =cut
 
-has _reader     => ( isa => Object,    ro, lazy_build, );
+has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
 =head1 ROLE SATISFYING METHODS
 
@@ -69,7 +67,7 @@ sub provides {
   my $self      = shift;
   my $conf      = $self->_reader->read_file( $self->file );
   my $to_record = sub {
-    Record->new(
+    Dist::Zilla::MetaProvides::ProvideRecord->new(
       module  => $_,
       file    => $conf->{$_}->{file},
       version => $conf->{$_}->{version},
