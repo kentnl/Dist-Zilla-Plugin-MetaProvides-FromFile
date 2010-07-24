@@ -1,41 +1,39 @@
 use strict;
 use warnings;
+
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.10034117';
+  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11034201';
 }
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
 #
 # $Id:$
 use Moose;
-use MooseX::Has::Sugar;
-use MooseX::Types::Moose (':all');
 use Moose::Autobox;
 use Carp                ();
 use Config::INI::Reader ();
-use aliased 'Dist::Zilla::MetaProvides::ProvideRecord' => 'Record', ();
+use Dist::Zilla::MetaProvides::ProvideRecord;
 
 
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
 
-has file        => ( isa => Str,       ro, required, );
+has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 
-has reader_name => ( isa => ClassName, ro, default => 'Config::INI::Reader', );
+has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
 
 
-
-has _reader     => ( isa => Object,    ro, lazy_build, );
+has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
 
 sub provides {
   my $self      = shift;
   my $conf      = $self->_reader->read_file( $self->file );
   my $to_record = sub {
-    Record->new(
+    Dist::Zilla::MetaProvides::ProvideRecord->new(
       module  => $_,
       file    => $conf->{$_}->{file},
       version => $conf->{$_}->{version},
@@ -66,7 +64,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 =head1 VERSION
 
-version 1.10034117
+version 1.11034201
 
 =head1 ROLES
 
