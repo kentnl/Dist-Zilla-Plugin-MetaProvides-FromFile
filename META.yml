@@ -20,22 +20,27 @@ name: Dist-Zilla-Plugin-MetaProvides-FromFile
 provides:
   Dist::Zilla::Plugin::MetaProvides::FromFile:
     file: lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm
-    version: 1.10034201
+    version: 1.11034201
 requires:
   Carp: 0
   Config::INI::Reader: 0
   Dist::Zilla::MetaProvides::ProvideRecord: 0
+  Dist::Zilla::Plugin::MetaProvides: 1.11034201
   Dist::Zilla::Role::MetaProvider::Provider: 0
   Moose: 0
   Moose::Autobox: 0
   namespace::autoclean: 0
-version: 1.10034201
+resources:
+  homepage: http://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile/tree
+  repository: git://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile.git
+version: 1.11034201
 x_BuiltWith:
   modules:
     Carp: 1.16
     Config::INI::Reader: 0.014
     Dist::Zilla::App::Tester: 4.101900
     Dist::Zilla::MetaProvides::ProvideRecord: 1.10027802
+    Dist::Zilla::Plugin::MetaProvides: 1.10027802
     Dist::Zilla::Role::MetaProvider::Provider: 1.10027802
     File::Find: 1.15
     File::Temp: 0.22

@@ -21,7 +21,7 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-Plugin-MetaProvides-FromFile',
-  'dist_version' => '1.10034201',
+  'dist_version' => '1.11034201',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::Plugin::MetaProvides::FromFile',
   'recommends' => {},
@@ -30,6 +30,7 @@ my %module_build_args = (
     'Carp' => '0',
     'Config::INI::Reader' => '0',
     'Dist::Zilla::MetaProvides::ProvideRecord' => '0',
+    'Dist::Zilla::Plugin::MetaProvides' => '1.11034201',
     'Dist::Zilla::Role::MetaProvider::Provider' => '0',
     'Moose' => '0',
     'Moose::Autobox' => '0',

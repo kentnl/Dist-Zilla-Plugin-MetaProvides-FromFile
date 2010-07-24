@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.10034201';
+  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11034201';
 }
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
@@ -64,7 +64,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 =head1 VERSION
 
-version 1.10034201
+version 1.11034201
 
 =head1 ROLES
 

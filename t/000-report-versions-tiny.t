@@ -52,6 +52,7 @@ eval { $v .= pmver('Carp','any version') };
 eval { $v .= pmver('Config::INI::Reader','any version') };
 eval { $v .= pmver('Dist::Zilla::App::Tester','any version') };
 eval { $v .= pmver('Dist::Zilla::MetaProvides::ProvideRecord','any version') };
+eval { $v .= pmver('Dist::Zilla::Plugin::MetaProvides','1.11034201') };
 eval { $v .= pmver('Dist::Zilla::Role::MetaProvider::Provider','any version') };
 eval { $v .= pmver('File::Find','any version') };
 eval { $v .= pmver('File::Temp','any version') };
