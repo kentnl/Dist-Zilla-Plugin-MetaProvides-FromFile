@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.11060208 2011-04-05T20:05:45Z
  - Minor changes only, mostly infrastructural.
 
  [Dependencies]
