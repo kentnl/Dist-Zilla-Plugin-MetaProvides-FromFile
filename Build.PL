@@ -8,6 +8,7 @@ use Module::Build 0.3601;
 my %module_build_args = (
   'build_requires' => {
     'Dist::Zilla::App::Tester' => '0',
+    'English' => '0',
     'File::Find' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
@@ -21,7 +22,7 @@ my %module_build_args = (
     'Kent Fredric <kentnl@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-Plugin-MetaProvides-FromFile',
-  'dist_version' => '1.11034201',
+  'dist_version' => '1.11060207',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::Plugin::MetaProvides::FromFile',
   'recommends' => {},
