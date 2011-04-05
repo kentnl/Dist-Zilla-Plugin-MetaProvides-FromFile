@@ -260,7 +260,7 @@ x_Dist_Zilla:
       name: '@Author::KENTNL/Twitter'
       version: 0.010
     -
-      class: Dist::Zilla::Plugin::Prereq
+      class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
           phase: runtime
@@ -268,7 +268,7 @@ x_Dist_Zilla:
       name: RuntimeRequires
       version: 4.200004
     -
-      class: Dist::Zilla::Plugin::Prereq
+      class: Dist::Zilla::Plugin::Prereqs
       config:
         Dist::Zilla::Plugin::Prereqs:
           phase: test

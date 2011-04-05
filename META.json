@@ -355,7 +355,7 @@
             "version" : "0.010"
          },
          {
-            "class" : "Dist::Zilla::Plugin::Prereq",
+            "class" : "Dist::Zilla::Plugin::Prereqs",
             "config" : {
                "Dist::Zilla::Plugin::Prereqs" : {
                   "phase" : "runtime",
@@ -366,7 +366,7 @@
             "version" : "4.200004"
          },
          {
-            "class" : "Dist::Zilla::Plugin::Prereq",
+            "class" : "Dist::Zilla::Plugin::Prereqs",
             "config" : {
                "Dist::Zilla::Plugin::Prereqs" : {
                   "phase" : "test",
