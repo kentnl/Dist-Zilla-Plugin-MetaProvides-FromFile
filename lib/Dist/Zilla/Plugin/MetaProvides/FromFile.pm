@@ -9,6 +9,7 @@ package Dist::Zilla::Plugin::MetaProvides::FromFile;
 use Moose;
 use Moose::Autobox;
 use Carp                ();
+use Class::Load         ();
 use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 
@@ -85,7 +86,7 @@ sub provides {
 
 sub _build__reader {
   my ($self) = shift;
-  eval "require " . $self->reader_name . "; 1;" or die;
+  Class::Load::load_class($self->reader_name);
   return $self->reader_name->new();
 }
 
@@ -100,5 +101,7 @@ sub _build__reader {
 =cut
 
 __PACKAGE__->meta->make_immutable;
+no Moose;
+
 1;
 
