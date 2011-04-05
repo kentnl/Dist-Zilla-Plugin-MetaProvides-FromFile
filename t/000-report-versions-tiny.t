@@ -49,6 +49,7 @@ sub pmver {
 }
 
 eval { $v .= pmver('Carp','any version') };
+eval { $v .= pmver('Class::Load','any version') };
 eval { $v .= pmver('Config::INI::Reader','any version') };
 eval { $v .= pmver('Dist::Zilla::App::Tester','any version') };
 eval { $v .= pmver('Dist::Zilla::MetaProvides::ProvideRecord','any version') };

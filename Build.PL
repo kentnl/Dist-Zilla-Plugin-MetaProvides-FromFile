@@ -29,6 +29,7 @@ my %module_build_args = (
   'recursive_test_files' => 1,
   'requires' => {
     'Carp' => '0',
+    'Class::Load' => '0',
     'Config::INI::Reader' => '0',
     'Dist::Zilla::MetaProvides::ProvideRecord' => '0',
     'Dist::Zilla::Plugin::MetaProvides' => '1.11034201',
