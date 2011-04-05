@@ -1,6 +1,35 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
-1.11060207 2011-04-05T19:49:55Z
+1.11060208 2011-04-05T20:03:37Z
+ - Minor changes only, mostly infrastructural.
+
+ [Dependencies]
+ - Now depends on Class::Load
+
+ [Dependencies::Devel]
+ - Advertises Development bundles.
+
+ [Dependencies::Testing]
+ - Depends on English
+
+ [Features]
+ - Now uses Class::Load instead of eval() for loading specified readers.
+   This increases security somewhat.
+
+ [Packaging]
+ - Moved to @Author::KENTNL
+ - Critic is now stricter.
+ - Ship .perltidyrc
+ - Reworked Changes for CPAN::Changes style.
+ - Moved perlcriticrc to perlcritic.rc
+ - Remove inc/*
+ - Use Bootstrap::lib
+ - Fix prereq -> prereqs
+
+ [Tests]
+ - Dropped handwritten perlcritic tests in favour of generated ones.
+ - Dropped portability tests.
+ - Added CPAN::Changes tests.
 
 1.11034201 2010-07-24T13:43:57Z
  - History forks here from Dist::Zilla::Plugin::MetaProvides
@@ -22,7 +51,7 @@ Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
 1.10001919 2009-09-12T06:17:57Z
  - Dropped the version dep on FindBin because it causes problems for some.
-   Apparently deping on something that	may or may not be in core which may
+   Apparently deping on something that may or may not be in core which may
    or may not be in core later is a bad thing.
  - Added CompileTests
  - Add dist.ini to release for diagnostic reasons.

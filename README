@@ -3,7 +3,7 @@ NAME
     works, pull in hand-crafted metadata from a specified file.
 
 VERSION
-    version 1.11060207
+    version 1.11060208
 
 ROLES
   Dist::Zilla::Role::MetaProvider::Provider

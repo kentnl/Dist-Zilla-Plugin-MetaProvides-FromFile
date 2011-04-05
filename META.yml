@@ -21,7 +21,7 @@ name: Dist-Zilla-Plugin-MetaProvides-FromFile
 provides:
   Dist::Zilla::Plugin::MetaProvides::FromFile:
     file: lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm
-    version: 1.11060207
+    version: 1.11060208
 requires:
   Carp: 0
   Class::Load: 0
@@ -35,7 +35,7 @@ requires:
 resources:
   homepage: http://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile/tree
   repository: git://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile.git
-version: 1.11060207
+version: 1.11060208
 x_BuiltWith:
   modules:
     Carp: 1.17
