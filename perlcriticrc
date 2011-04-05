@@ -1,2 +1,0 @@
-[Perl::Critic::Policy::BuiltinFunctions::ProhibitStringyEval]
-allow_includes = 1

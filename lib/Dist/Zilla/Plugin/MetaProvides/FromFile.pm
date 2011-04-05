@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11034201';
+  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060208';
 }
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
@@ -12,6 +12,7 @@ BEGIN {
 use Moose;
 use Moose::Autobox;
 use Carp                ();
+use Class::Load         ();
 use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 
@@ -46,12 +47,14 @@ sub provides {
 
 sub _build__reader {
   my ($self) = shift;
-  eval "require " . $self->reader_name . "; 1;" or die;
+  Class::Load::load_class($self->reader_name);
   return $self->reader_name->new();
 }
 
 
 __PACKAGE__->meta->make_immutable;
+no Moose;
+
 1;
 
 
@@ -64,7 +67,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 =head1 VERSION
 
-version 1.11034201
+version 1.11060208
 
 =head1 ROLES
 
@@ -116,7 +119,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Kent Fredric.
+This software is copyright (c) 2011 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
