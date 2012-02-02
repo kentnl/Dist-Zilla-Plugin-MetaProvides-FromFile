@@ -1,5 +1,31 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
+1.11060209 2012-02-02T20:02:50Z
+ - Maintenance release.
+
+ [Dependencies::Changed]
+ - develop suggests : Dist::Zilla::PluginBundle::Author::KENTNL v1.0.0 ->
+   v1.2.0
+
+ [Dependencies::New]
+ - runtime requires : perl 5.006
+ - runtime requires : strict
+ - runtime requires : warnings
+
+ [Dependencies::Removed]
+ - test requires : English
+
+ [Internals]
+ - All namespaces now declare $AUTHORITY
+ - $VERSION declarations moved outside BEGIN
+
+ [Packaging]
+ - Update LICENSE ( Year, Indent, Address )
+ - Move extra-tests to xt/
+ - GIT urls moved to https://
+ - declares x_authority
+ - Git Versions
+
 1.11060208 2011-04-05T20:05:45Z
  - Minor changes only, mostly infrastructural.
 
