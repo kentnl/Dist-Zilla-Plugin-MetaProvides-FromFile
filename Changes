@@ -1,6 +1,8 @@
 ﻿Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+1.11060211 2013-04-08T09:49:35Z
  [Documentation]
  - Greatly improve previously lacklustre documentation so its not confusing
    for people who didn't read the MetaProvides docs first.
