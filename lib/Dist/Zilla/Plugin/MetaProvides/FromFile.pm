@@ -6,7 +6,7 @@ BEGIN {
   $Dist::Zilla::Plugin::MetaProvides::FromFile::AUTHORITY = 'cpan:KENTNL';
 }
 {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060210';
+  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060211';
 }
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
@@ -70,7 +70,77 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 =head1 VERSION
 
-version 1.11060210
+version 1.11060211
+
+=head1 SYNOPSIS
+
+For a general overview of the C<MetaProvides> family, see L<< Dist::Zilla::Plugin::B<MetaProvides>|Dist::Zilla::Plugin::MetaProvides >>
+
+This module is tailored to the situation where probing various files for C<provides> data is not possible, and you just want to declare some in an external file.
+
+    [MetaProvides::FromFile]
+    inherit_version = 0         ; optional, default = 1
+    inherit_missing = 0         ; optional, default = 1
+    file = some_file.ini        ; required
+    reader_name = Config::INI::Reader ; optional, default = Config::INI::Reader
+    meta_no_index               ; optional, useless
+
+And in C<some_file.ini>
+
+    [Foo::Package]
+    file    = some/module/path
+    version = 0.1
+
+=head1 OPTION SUMMARY
+
+=head2 inherit_version
+
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/inherit_version>
+
+=head2 inherit_missing
+
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/inherit_missing>
+
+=head2 meta_no_index
+
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/meta_no_index>
+
+However, given you're hard-coding the 'provides' map in the source file, and given that parameter
+is intended to exclude I<discovered> modules from being indexed, it seems like the smart option would
+be to simply delete the unwanted entries from the source file.
+
+=head2 file
+
+Mandatory path to a file within your distribution, relative to the distribution root, to extract C<provides> data from.
+
+=head2 reader_name
+
+A class that can be used to read the named file. Defaults to Config::INI::Reader.
+
+It can be substituted by any class name that matches the following criteria
+
+=over 4
+
+=item * Can be instantiated via C<new>
+
+    my $instance = $reader_name->new();
+
+=item * has a C<read_file> method on the instance
+
+    my $result = $instance->read_file( ... )
+
+=item * C<read_file> can take the parameter C<file>
+
+    my $result = $instance->read_file( file => 'path/to/file' )
+
+=item * C<read_file> returns a hashref matching the following structure
+
+    { 'Package::Name' => {
+        file = 'path/to/file',
+        version => '0.1',
+    } }
+
+=back
 
 =head1 ROLES
 

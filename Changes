@@ -1,5 +1,10 @@
 ﻿Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
+1.11060211 2013-04-08T09:49:35Z
+ [Documentation]
+ - Greatly improve previously lacklustre documentation so its not confusing
+   for people who didn't read the MetaProvides docs first.
+
 1.11060210 2013-04-08T08:33:46Z
  - Maintenance Release for Module::Build 0.4004
 
