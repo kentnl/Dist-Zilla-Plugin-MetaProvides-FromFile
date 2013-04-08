@@ -95,15 +95,15 @@ And in C<some_file.ini>
 
 =head2 inherit_version
 
-Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvies/inherit_version>
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/inherit_version>
 
 =head2 inherit_missing
 
-Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvies/inherit_missing>
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/inherit_missing>
 
 =head2 meta_no_index
 
-Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvies/meta_no_index>
+Shared Logic with all MetaProvides Plugins. See L<Dist::Zilla::Plugin::MetaProvides/meta_no_index>
 
 However, given you're hard-coding the 'provides' map in the source file, and given that parameter
 is intended to exclude I<discovered> modules from being indexed, it seems like the smart option would

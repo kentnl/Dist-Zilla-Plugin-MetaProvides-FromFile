@@ -29,15 +29,15 @@ SYNOPSIS
 OPTION SUMMARY
   inherit_version
     Shared Logic with all MetaProvides Plugins. See "inherit_version" in
-    Dist::Zilla::Plugin::MetaProvies
+    Dist::Zilla::Plugin::MetaProvides
 
   inherit_missing
     Shared Logic with all MetaProvides Plugins. See "inherit_missing" in
-    Dist::Zilla::Plugin::MetaProvies
+    Dist::Zilla::Plugin::MetaProvides
 
   meta_no_index
     Shared Logic with all MetaProvides Plugins. See "meta_no_index" in
-    Dist::Zilla::Plugin::MetaProvies
+    Dist::Zilla::Plugin::MetaProvides
 
     However, given you're hard-coding the 'provides' map in the source file,
     and given that parameter is intended to exclude *discovered* modules
