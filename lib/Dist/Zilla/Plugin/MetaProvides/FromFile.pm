@@ -115,7 +115,7 @@ Mandatory path to a file within your distribution, relative to the distribution 
 
 =head2 reader_name
 
-A class that can be used to read the named file. Defaults to Config::INI::Reader. 
+A class that can be used to read the named file. Defaults to Config::INI::Reader.
 
 It can be substituted by any class name that matches the following criteria
 
