@@ -63,7 +63,7 @@ OPTION SUMMARY
 
             my $result = $instance->read_file( ... )
 
-    *   "read_file" can take the paramter "file"
+    *   "read_file" can take the parameter "file"
 
             my $result = $instance->read_file( file => 'path/to/file' )
 
