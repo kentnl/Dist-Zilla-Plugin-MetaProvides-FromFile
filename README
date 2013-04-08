@@ -20,6 +20,12 @@ SYNOPSIS
         reader_name = Config::INI::Reader ; optional, default = Config::INI::Reader
         meta_no_index               ; optional, useless
 
+    And in "some_file.ini"
+
+        [Foo::Package]
+        file    = some/module/path
+        version = 0.1
+
 OPTION SUMMARY
   inherit_version
     Shared Logic with all MetaProvides Plugins. See "inherit_version" in

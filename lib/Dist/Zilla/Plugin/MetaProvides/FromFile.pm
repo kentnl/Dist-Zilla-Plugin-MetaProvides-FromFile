@@ -85,6 +85,12 @@ This module is tailored to the situation where probing various files for C<provi
     reader_name = Config::INI::Reader ; optional, default = Config::INI::Reader
     meta_no_index               ; optional, useless
 
+And in C<some_file.ini>
+
+    [Foo::Package]
+    file    = some/module/path
+    version = 0.1
+
 =head1 OPTION SUMMARY
 
 =head2 inherit_version
