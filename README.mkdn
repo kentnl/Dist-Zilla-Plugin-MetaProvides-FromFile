@@ -59,7 +59,7 @@ It can be substituted by any class name that matches the following criteria
 - has a `read_file` method on the instance
 
         my $result = $instance->read_file( ... )
-- `read_file` can take the paramter `file`
+- `read_file` can take the parameter `file`
 
         my $result = $instance->read_file( file => 'path/to/file' )
 - `read_file` returns a hashref matching the following structure

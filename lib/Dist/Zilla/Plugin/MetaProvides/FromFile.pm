@@ -70,7 +70,7 @@ It can be substituted by any class name that matches the following criteria
 
     my $result = $instance->read_file( ... )
 
-=item * C<read_file> can take the paramter C<file>
+=item * C<read_file> can take the parameter C<file>
 
     my $result = $instance->read_file( file => 'path/to/file' )
 
