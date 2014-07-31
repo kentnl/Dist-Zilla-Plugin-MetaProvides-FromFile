@@ -265,7 +265,7 @@ It can be substituted by any class name that matches the following criteria
 
 =head1 ROLES
 
-=head2 L<Dist::Zilla::Role::MetaProvider::Provider>
+=head2 L<< C<::Role::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >>
 
 =head1 PLUGIN FIELDS
 
@@ -289,11 +289,11 @@ It can be substituted by any class name that matches the following criteria
 
 =head2 provides
 
-A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
+A conformant function to the L<< C<::Role::MetaProvider::Provider>|Dist::Zila::Role::MetaProvider::Provider >> Role.
 
 =head3 signature: $plugin->provides()
 
-=head3 returns: Array of L<Dist::Zilla::MetaProvides::ProvideRecord>
+=head3 returns: Array of L<< C<MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
 
 =head1 BUILDER METHODS
 
@@ -303,7 +303,7 @@ A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
 
 =over 4
 
-=item * L<Dist::Zilla::Plugin::MetaProvides>
+=item * L<< C<[MetaProvides]>|Dist::Zilla::Plugin::MetaProvides >>
 
 =back
 
