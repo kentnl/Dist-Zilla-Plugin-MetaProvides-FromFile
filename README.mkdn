@@ -4,11 +4,11 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 # VERSION
 
-version 1.11060211
+version 1.11060212
 
 # SYNOPSIS
 
-For a general overview of the `MetaProvides` family, see [Dist::Zilla::Plugin::__MetaProvides__](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::MetaProvides)
+For a general overview of the `MetaProvides` family, see [Dist::Zilla::Plugin::**MetaProvides**](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
 
 This module is tailored to the situation where probing various files for `provides` data is not possible, and you just want to declare some in an external file.
 
@@ -29,15 +29,15 @@ And in `some_file.ini`
 
 ## inherit\_version
 
-Shared Logic with all MetaProvides Plugins. See ["inherit\_version" in Dist::Zilla::Plugin::MetaProvides](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::MetaProvides#inherit\_version)
+Shared Logic with all MetaProvides Plugins. See ["inherit\_version" in Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides#inherit_version)
 
 ## inherit\_missing
 
-Shared Logic with all MetaProvides Plugins. See ["inherit\_missing" in Dist::Zilla::Plugin::MetaProvides](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::MetaProvides#inherit\_missing)
+Shared Logic with all MetaProvides Plugins. See ["inherit\_missing" in Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides#inherit_missing)
 
 ## meta\_no\_index
 
-Shared Logic with all MetaProvides Plugins. See ["meta\_no\_index" in Dist::Zilla::Plugin::MetaProvides](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::MetaProvides#meta\_no\_index)
+Shared Logic with all MetaProvides Plugins. See ["meta\_no\_index" in Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides#meta_no_index)
 
 However, given you're hard-coding the 'provides' map in the source file, and given that parameter
 is intended to exclude _discovered_ modules from being indexed, it seems like the smart option would
@@ -56,12 +56,15 @@ It can be substituted by any class name that matches the following criteria
 - Can be instantiated via `new`
 
         my $instance = $reader_name->new();
+
 - has a `read_file` method on the instance
 
         my $result = $instance->read_file( ... )
+
 - `read_file` can take the parameter `file`
 
         my $result = $instance->read_file( file => 'path/to/file' )
+
 - `read_file` returns a hashref matching the following structure
 
         { 'Package::Name' => {
@@ -71,7 +74,7 @@ It can be substituted by any class name that matches the following criteria
 
 # ROLES
 
-## [Dist::Zilla::Role::MetaProvider::Provider](http://search.cpan.org/perldoc?Dist::Zilla::Role::MetaProvider::Provider)
+## [Dist::Zilla::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider)
 
 # PLUGIN FIELDS
 
@@ -89,17 +92,17 @@ It can be substituted by any class name that matches the following criteria
 
 ## \_reader
 
-### type: Object, ro, built from ["reader\_name"](#reader\_name)
+### type: Object, ro, built from ["reader\_name"](#reader_name)
 
 # ROLE SATISFYING METHODS
 
 ## provides
 
-A conformant function to the [Dist::Zila::Role::MetaProvider::Provider](http://search.cpan.org/perldoc?Dist::Zila::Role::MetaProvider::Provider) Role.
+A conformant function to the [Dist::Zila::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zila::Role::MetaProvider::Provider) Role.
 
 ### signature: $plugin->provides()
 
-### returns: Array of [Dist::Zilla::MetaProvides::ProvideRecord](http://search.cpan.org/perldoc?Dist::Zilla::MetaProvides::ProvideRecord)
+### returns: Array of [Dist::Zilla::MetaProvides::ProvideRecord](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
 
 # BUILDER METHODS
 
@@ -107,7 +110,7 @@ A conformant function to the [Dist::Zila::Role::MetaProvider::Provider](http://s
 
 # SEE ALSO
 
-- [Dist::Zilla::Plugin::MetaProvides](http://search.cpan.org/perldoc?Dist::Zilla::Plugin::MetaProvides)
+- [Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
 
 # AUTHOR
 
@@ -115,7 +118,7 @@ Kent Fredric <kentnl@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
