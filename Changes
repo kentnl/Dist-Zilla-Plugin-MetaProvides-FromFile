@@ -22,6 +22,13 @@
  - runtime: +2 ↑1 -2
  - test: +5 ↓1 -2 (recommends: +3)
 
+ [Misc]
+ - Whitespace padded by replace_with_blank
+ - use Module::Runtime instead of Class::Load
+ - Don't use Autobox
+ - Tigher to critic
+ - Many generated test updates
+
 1.11060211 2013-04-08T09:49:35Z
  [Documentation]
  - Greatly improve previously lacklustre documentation so its not confusing for people who didn't read the MetaProvides
