@@ -2,7 +2,9 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
-$Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060212';
+
+our $VERSION = '1.11060212';
+
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
 #
 # $Id:$
