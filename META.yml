@@ -22,7 +22,7 @@ name: Dist-Zilla-Plugin-MetaProvides-FromFile
 provides:
   Dist::Zilla::Plugin::MetaProvides::FromFile:
     file: lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm
-    version: '1.11060212'
+    version: '2.000000'
 requires:
   Carp: '0'
   Class::Load: '0'
@@ -40,7 +40,7 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile.git
-version: '1.11060212'
+version: '2.000000'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -260,7 +260,7 @@ x_Dist_Zilla:
       class: Dist::Zilla::Plugin::RewriteVersion::Sanitized
       config:
         Dist::Zilla::Role::Version::Sanitize:
-          mantissa: '8'
+          mantissa: '6'
           normal_form: numify
       name: '@Author::KENTNL/RewriteVersion::Sanitized'
       version: '0.001001'
@@ -434,7 +434,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 1.11060212-source
+          tag: 2.000000-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -488,7 +488,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '1.11060212'
+          tag: '2.000000'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local

@@ -3,7 +3,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '1.11060212';
+our $VERSION = '2.000000';
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
 
@@ -159,7 +159,7 @@ sub provides {
 
 sub _build__reader {
   my ($self) = shift;
-  Class::Load::load_class($self->reader_name);
+  Class::Load::load_class( $self->reader_name );
   return $self->reader_name->new();
 }
 
@@ -190,7 +190,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 =head1 VERSION
 
-version 1.11060212
+version 2.000000
 
 =head1 SYNOPSIS
 
