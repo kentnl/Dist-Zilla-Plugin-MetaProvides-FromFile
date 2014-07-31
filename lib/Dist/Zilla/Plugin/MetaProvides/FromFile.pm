@@ -11,7 +11,7 @@ our $VERSION = '2.000000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moose;
+use Moose qw( with has );
 use Carp ();
 use Module::Runtime qw( require_module );
 use Config::INI::Reader ();
