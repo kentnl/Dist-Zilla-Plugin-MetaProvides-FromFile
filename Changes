@@ -1,12 +1,18 @@
 ﻿Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
-2.000000 2014-07-31T04:05:42Z
+2.000000 2014-07-31T04:09:57Z
  [00 Major]
  - Sizeable changes that may impact downsteams that work by hand.
 
  [01 Tooling]
  - Tooling switched to ExtUtils::MakeMaker
+ - Dependency ramping softened.
  - https://questhub.io/realm/perl/quest/5388cc12bbd0be5b2500011f
+
+ [02 Version Scheme]
+ - Version scheme shorted from x.yyyyyyyy ( Mantissa =8 ) to x.yyyyyy ( Mantissa = 6 )
+ - This is the primary reason for the 2.x on the box.
+ - https://questhub.io/realm/perl/quest/5388d3a9bbd0be2224000129
 
  [Dependencies::Stats]
  - Dependencies changed since 1.11060211, see misc/*.deps* for details
