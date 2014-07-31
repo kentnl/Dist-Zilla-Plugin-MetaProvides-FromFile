@@ -114,7 +114,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::MetaProvides::FromFile" : {
          "file" : "lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm",
-         "version" : "2.000000"
+         "version" : "2.000001"
       }
    },
    "release_status" : "stable",
@@ -129,7 +129,7 @@
          "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile"
       }
    },
-   "version" : "2.000000",
+   "version" : "2.000001",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142060",
@@ -627,7 +627,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "2.000000-source",
+                  "tag" : "2.000001-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -698,7 +698,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "2.000000",
+                  "tag" : "2.000001",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

@@ -3,7 +3,7 @@ NAME
     works, pull in hand-crafted metadata from a specified file.
 
 VERSION
-    version 2.000000
+    version 2.000001
 
 SYNOPSIS
     For a general overview of the "MetaProvides" family, see
