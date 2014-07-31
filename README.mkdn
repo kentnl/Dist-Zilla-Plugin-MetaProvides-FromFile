@@ -74,7 +74,7 @@ It can be substituted by any class name that matches the following criteria
 
 # ROLES
 
-## [Dist::Zilla::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider)
+## [`::Role::MetaProvider::Provider`](https://metacpan.org/pod/Dist::Zilla::Role::MetaProvider::Provider)
 
 # PLUGIN FIELDS
 
@@ -98,11 +98,11 @@ It can be substituted by any class name that matches the following criteria
 
 ## provides
 
-A conformant function to the [Dist::Zila::Role::MetaProvider::Provider](https://metacpan.org/pod/Dist::Zila::Role::MetaProvider::Provider) Role.
+A conformant function to the [`::Role::MetaProvider::Provider`](https://metacpan.org/pod/Dist::Zila::Role::MetaProvider::Provider) Role.
 
 ### signature: $plugin->provides()
 
-### returns: Array of [Dist::Zilla::MetaProvides::ProvideRecord](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
+### returns: Array of [`MetaProvides::ProvideRecord`](https://metacpan.org/pod/Dist::Zilla::MetaProvides::ProvideRecord)
 
 # BUILDER METHODS
 
@@ -110,7 +110,7 @@ A conformant function to the [Dist::Zila::Role::MetaProvider::Provider](https://
 
 # SEE ALSO
 
-- [Dist::Zilla::Plugin::MetaProvides](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
+- [`[MetaProvides]`](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
 
 # AUTHOR
 
