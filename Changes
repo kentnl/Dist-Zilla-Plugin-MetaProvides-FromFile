@@ -1,6 +1,6 @@
 ﻿Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
-2.000000 2014-07-31T04:29:56Z
+2.000000 2014-07-31T04:49:22Z
  [00 Major]
  - Sizeable changes that may impact downsteams that work by hand.
 
@@ -28,7 +28,6 @@
  - Don't use Autobox
  - Tigher to critic
  - Many generated test updates
-
 
 1.11060211 2013-04-08T09:49:35Z
  [Documentation]
