@@ -4,7 +4,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, p
 
 # VERSION
 
-version 2.000000
+version 2.000001
 
 # SYNOPSIS
 
