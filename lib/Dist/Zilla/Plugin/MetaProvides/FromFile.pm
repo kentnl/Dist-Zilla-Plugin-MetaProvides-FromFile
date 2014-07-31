@@ -2,13 +2,7 @@ use strict;
 use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
-BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060211';
-}
-
+$Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060212';
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
 #
 # $Id:$
@@ -20,17 +14,124 @@ use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
+
+
+
+
+
+
+
 
 
 has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 
+
+
+
+
+
+
+
 has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
 
 
+
+
+
+
+
+
+
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
+
+
+
+
+
+
+
+
+
+
+
 
 
 sub provides {
@@ -48,11 +149,25 @@ sub provides {
 }
 
 
+
+
+
+
+
 sub _build__reader {
   my ($self) = shift;
   Class::Load::load_class($self->reader_name);
   return $self->reader_name->new();
 }
+
+
+
+
+
+
+
+
+
 
 
 __PACKAGE__->meta->make_immutable;
@@ -64,13 +179,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, pull in hand-crafted metadata from a specified file.
 
 =head1 VERSION
 
-version 1.11060211
+version 1.11060212
 
 =head1 SYNOPSIS
 
@@ -192,7 +309,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
