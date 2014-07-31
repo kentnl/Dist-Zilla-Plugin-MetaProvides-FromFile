@@ -1,36 +1,141 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
-BEGIN {
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::AUTHORITY = 'cpan:KENTNL';
-}
-{
-  $Dist::Zilla::Plugin::MetaProvides::FromFile::VERSION = '1.11060211';
-}
+
+our $VERSION = '2.000000';
 
 # ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
-#
-# $Id:$
-use Moose;
-use Moose::Autobox;
-use Carp                ();
-use Class::Load         ();
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
+
+use Moose qw( with has );
+use Carp ();
+use Module::Runtime qw( require_module );
 use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 use namespace::autoclean;
 with 'Dist::Zilla::Role::MetaProvider::Provider';
 
 
+
+
+
+
+
+
+
 has file => ( isa => 'Str', is => 'ro', required => 1, );
+
+
+
+
+
+
+
 
 
 has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
 
 
+
+
+
+
+
+
+
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
+
+
+
+
+
+
+
+
+
+
+
 
 
 sub provides {
@@ -44,15 +149,29 @@ sub provides {
       parent  => $self,
     );
   };
-  return $conf->keys->map($to_record)->flatten;
+  return map { $to_record->($_) } keys %{$conf};
 }
+
+
+
+
+
 
 
 sub _build__reader {
   my ($self) = shift;
-  Class::Load::load_class($self->reader_name);
+  require_module( $self->reader_name );
   return $self->reader_name->new();
 }
+
+
+
+
+
+
+
+
+
 
 
 __PACKAGE__->meta->make_immutable;
@@ -64,13 +183,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, pull in hand-crafted metadata from a specified file.
 
 =head1 VERSION
 
-version 1.11060211
+version 2.000000
 
 =head1 SYNOPSIS
 
@@ -144,7 +265,7 @@ It can be substituted by any class name that matches the following criteria
 
 =head1 ROLES
 
-=head2 L<Dist::Zilla::Role::MetaProvider::Provider>
+=head2 L<< C<::Role::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >>
 
 =head1 PLUGIN FIELDS
 
@@ -168,11 +289,11 @@ It can be substituted by any class name that matches the following criteria
 
 =head2 provides
 
-A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
+A conformant function to the L<< C<::Role::MetaProvider::Provider>|Dist::Zila::Role::MetaProvider::Provider >> Role.
 
 =head3 signature: $plugin->provides()
 
-=head3 returns: Array of L<Dist::Zilla::MetaProvides::ProvideRecord>
+=head3 returns: Array of L<< C<MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
 
 =head1 BUILDER METHODS
 
@@ -182,7 +303,7 @@ A conformant function to the L<Dist::Zila::Role::MetaProvider::Provider> Role.
 
 =over 4
 
-=item * L<Dist::Zilla::Plugin::MetaProvides>
+=item * L<< C<[MetaProvides]>|Dist::Zilla::Plugin::MetaProvides >>
 
 =back
 
@@ -192,7 +313,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Kent Fredric.
+This software is copyright (c) 2014 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

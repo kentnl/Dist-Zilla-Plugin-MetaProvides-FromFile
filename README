@@ -3,7 +3,7 @@ NAME
     works, pull in hand-crafted metadata from a specified file.
 
 VERSION
-    version 1.11060211
+    version 2.000000
 
 SYNOPSIS
     For a general overview of the "MetaProvides" family, see
@@ -75,7 +75,7 @@ OPTION SUMMARY
             } }
 
 ROLES
-  Dist::Zilla::Role::MetaProvider::Provider
+  "::Role::MetaProvider::Provider"
 PLUGIN FIELDS
   file
    type: required, ro, Str
@@ -87,21 +87,20 @@ PRIVATE PLUGIN FIELDS
    type: Object, ro, built from "reader_name"
 ROLE SATISFYING METHODS
   provides
-    A conformant function to the Dist::Zila::Role::MetaProvider::Provider
-    Role.
+    A conformant function to the "::Role::MetaProvider::Provider" Role.
 
    signature: $plugin->provides()
-   returns: Array of Dist::Zilla::MetaProvides::ProvideRecord
+   returns: Array of "MetaProvides::ProvideRecord"
 BUILDER METHODS
   _build__reader
 SEE ALSO
-    *   Dist::Zilla::Plugin::MetaProvides
+    *   "[MetaProvides]"
 
 AUTHOR
     Kent Fredric <kentnl@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Kent Fredric.
+    This software is copyright (c) 2014 by Kent Fredric.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
