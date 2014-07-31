@@ -120,13 +120,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile/issues"
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile/issues"
       },
-      "homepage" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile",
+      "homepage" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile.git",
-         "web" : "https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile"
+         "url" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile.git",
+         "web" : "https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile"
       }
    },
    "version" : "1.11060212",

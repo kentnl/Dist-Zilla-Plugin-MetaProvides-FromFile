@@ -38,9 +38,9 @@ requires:
   strict: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile/issues
-  homepage: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile
-  repository: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaProvides-FromFile.git
+  bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile/issues
+  homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile
+  repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile.git
 version: '1.11060212'
 x_BuiltWith:
   modules:
