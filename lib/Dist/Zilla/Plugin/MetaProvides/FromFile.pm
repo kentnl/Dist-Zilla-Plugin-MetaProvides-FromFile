@@ -11,8 +11,8 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moose;
 use Moose::Autobox;
-use Carp                ();
-use Class::Load         ();
+use Carp ();
+use Module::Runtime qw( require_module );
 use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 
@@ -159,7 +159,7 @@ sub provides {
 
 sub _build__reader {
   my ($self) = shift;
-  Class::Load::load_class( $self->reader_name );
+  require_module( $self->reader_name );
   return $self->reader_name->new();
 }
 
