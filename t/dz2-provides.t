@@ -6,8 +6,8 @@ use Test::More;
 
 use Dist::Zilla::App::Tester;
 
-my $result = test_dzil('t/eg/DZ2', [qw( build ) ] );
+my $result = test_dzil( 't/eg/DZ2', [qw( build )] );
 
-is( $result->exit_code, 0, "Build test succeeded");
+is( $result->exit_code, 0, "Build test succeeded" );
 
 done_testing;

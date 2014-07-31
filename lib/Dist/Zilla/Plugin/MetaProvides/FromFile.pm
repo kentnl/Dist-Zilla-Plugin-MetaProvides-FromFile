@@ -159,7 +159,7 @@ sub provides {
 
 sub _build__reader {
   my ($self) = shift;
-  Class::Load::load_class($self->reader_name);
+  Class::Load::load_class( $self->reader_name );
   return $self->reader_name->new();
 }
 
