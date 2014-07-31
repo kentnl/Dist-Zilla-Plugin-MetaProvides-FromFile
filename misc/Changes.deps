@@ -25,6 +25,7 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
 
  [Removed / runtime requires]
  - Class::Load
+ - Moose::Autobox
 
  [Removed / test requires]
  - File::Find
