@@ -26,6 +26,25 @@ SYNOPSIS
         file    = some/module/path
         version = 0.1
 
+ROLES
+  "::Role::MetaProvider::Provider"
+PLUGIN FIELDS
+  file
+   type: required, ro, Str
+  reader_name
+   type: ClassName, ro.
+   default: Config::INI::Reader
+PRIVATE PLUGIN FIELDS
+  _reader
+   type: Object, ro, built from "reader_name"
+ROLE SATISFYING METHODS
+  provides
+    A conformant function to the "::Role::MetaProvider::Provider" Role.
+
+   signature: $plugin->provides()
+   returns: Array of "MetaProvides::ProvideRecord"
+BUILDER METHODS
+  _build__reader
 OPTION SUMMARY
   inherit_version
     Shared Logic with all MetaProvides Plugins. See "inherit_version" in
@@ -74,25 +93,6 @@ OPTION SUMMARY
                 version => '0.1',
             } }
 
-ROLES
-  "::Role::MetaProvider::Provider"
-PLUGIN FIELDS
-  file
-   type: required, ro, Str
-  reader_name
-   type: ClassName, ro.
-   default: Config::INI::Reader
-PRIVATE PLUGIN FIELDS
-  _reader
-   type: Object, ro, built from "reader_name"
-ROLE SATISFYING METHODS
-  provides
-    A conformant function to the "::Role::MetaProvider::Provider" Role.
-
-   signature: $plugin->provides()
-   returns: Array of "MetaProvides::ProvideRecord"
-BUILDER METHODS
-  _build__reader
 SEE ALSO
     *   "[MetaProvides]"
 
