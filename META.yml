@@ -335,6 +335,10 @@ x_Dist_Zilla:
               version: '4.006'
             -
               class: Pod::Weaver::Section::Generic
+              name: 'OPTION SUMMARY'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
               name: ROLES
               version: '4.006'
             -

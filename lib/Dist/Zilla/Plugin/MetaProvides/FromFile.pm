@@ -132,42 +132,6 @@ And in C<some_file.ini>
     file    = some/module/path
     version = 0.1
 
-=head1 ROLES
-
-=head2 L<< C<::Role::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >>
-
-=head1 PLUGIN FIELDS
-
-=head2 file
-
-=head3 type: required, ro, Str
-
-=head2 reader_name
-
-=head3 type: ClassName, ro.
-
-=head3 default: Config::INI::Reader
-
-=head1 PRIVATE PLUGIN FIELDS
-
-=head2 _reader
-
-=head3 type: Object, ro, built from L</reader_name>
-
-=head1 ROLE SATISFYING METHODS
-
-=head2 provides
-
-A conformant function to the L<< C<::Role::MetaProvider::Provider>|Dist::Zila::Role::MetaProvider::Provider >> Role.
-
-=head3 signature: $plugin->provides()
-
-=head3 returns: Array of L<< C<MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
-
-=head1 BUILDER METHODS
-
-=head2 _build__reader
-
 =head1 OPTION SUMMARY
 
 =head2 inherit_version
@@ -218,6 +182,42 @@ It can be substituted by any class name that matches the following criteria
     } }
 
 =back
+
+=head1 ROLES
+
+=head2 L<< C<::Role::MetaProvider::Provider>|Dist::Zilla::Role::MetaProvider::Provider >>
+
+=head1 PLUGIN FIELDS
+
+=head2 file
+
+=head3 type: required, ro, Str
+
+=head2 reader_name
+
+=head3 type: ClassName, ro.
+
+=head3 default: Config::INI::Reader
+
+=head1 PRIVATE PLUGIN FIELDS
+
+=head2 _reader
+
+=head3 type: Object, ro, built from L</reader_name>
+
+=head1 ROLE SATISFYING METHODS
+
+=head2 provides
+
+A conformant function to the L<< C<::Role::MetaProvider::Provider>|Dist::Zila::Role::MetaProvider::Provider >> Role.
+
+=head3 signature: $plugin->provides()
+
+=head3 returns: Array of L<< C<MetaProvides::ProvideRecord>|Dist::Zilla::MetaProvides::ProvideRecord >>
+
+=head1 BUILDER METHODS
+
+=head2 _build__reader
 
 =head1 SEE ALSO
 
