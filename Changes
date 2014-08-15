@@ -4,11 +4,15 @@
  [00 Trivial]
  - no code changes.
  - tests augmented.
+ - whitespace adjusted.
 
  [Dependencies::Stats]
  - Dependencies changed since 2.000000, see misc/*.deps* for details
  - develop: +1 (suggests: ↑1)
  - test: -3
+
+ [Misc]
+ - Improve source side POD to reduce build side whitespace.
 
  [Tests]
  - update test::reportprereqs
