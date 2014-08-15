@@ -334,6 +334,26 @@ x_Dist_Zilla:
               name: PRIVATE_METHODS
               version: '4.006'
             -
+              class: Pod::Weaver::Section::Generic
+              name: ROLES
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: 'PLUGIN FIELDS'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: 'PRIVATE PLUGIN FIELDS'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: 'ROLE SATISFYING METHODS'
+              version: '4.006'
+            -
+              class: Pod::Weaver::Section::Generic
+              name: 'BUILDER METHODS'
+              version: '4.006'
+            -
               class: Pod::Weaver::Section::Leftovers
               name: Leftovers
               version: '4.006'
