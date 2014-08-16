@@ -19,7 +19,7 @@ name: Dist-Zilla-Plugin-MetaProvides-FromFile
 provides:
   Dist::Zilla::Plugin::MetaProvides::FromFile:
     file: lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm
-    version: '2.000001'
+    version: '2.000002'
 requires:
   Carp: '0'
   Config::INI::Reader: '0'
@@ -37,7 +37,7 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile.git
-version: '2.000001'
+version: '2.000002'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.142060'
@@ -467,7 +467,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '0'
-          tag: 2.000001-source
+          tag: 2.000002-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -521,7 +521,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: '0'
-          tag: '2.000001'
+          tag: '2.000002'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
