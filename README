@@ -1,6 +1,6 @@
 NAME
-    Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else
-    works, pull in hand-crafted metadata from a specified file.
+    Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted
+    metadata from a specified file.
 
 VERSION
     version 2.000001

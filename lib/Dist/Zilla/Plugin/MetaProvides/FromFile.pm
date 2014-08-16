@@ -7,7 +7,7 @@ package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
 our $VERSION = '2.000001';
 
-# ABSTRACT: In the event nothing else works, pull in hand-crafted metadata from a specified file.
+# ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -107,7 +107,7 @@ __END__
 
 =head1 NAME
 
-Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, pull in hand-crafted metadata from a specified file.
+Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted metadata from a specified file.
 
 =head1 VERSION
 
@@ -115,9 +115,11 @@ version 2.000001
 
 =head1 SYNOPSIS
 
-For a general overview of the C<MetaProvides> family, see L<< Dist::Zilla::Plugin::B<MetaProvides>|Dist::Zilla::Plugin::MetaProvides >>
+For a general overview of the C<MetaProvides> family, see
+L<< Dist::Zilla::Plugin::B<MetaProvides>|Dist::Zilla::Plugin::MetaProvides >>
 
-This module is tailored to the situation where probing various files for C<provides> data is not possible, and you just want to declare some in an external file.
+This module is tailored to the situation where probing various files for C<provides> data is not possible, and you just want to
+declare some in an external file.
 
     [MetaProvides::FromFile]
     inherit_version = 0         ; optional, default = 1

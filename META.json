@@ -1,5 +1,5 @@
 {
-   "abstract" : "In the event nothing else works, pull in hand-crafted metadata from a specified file.",
+   "abstract" : "Pull in hand-crafted metadata from a specified file.",
    "author" : [
       "Kent Fredric <kentnl@cpan.org>"
    ],
