@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker ;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "In the event nothing else works, pull in hand-crafted metadata from a specified file.",
+  "ABSTRACT" => "Pull in hand-crafted metadata from a specified file.",
   "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
@@ -36,12 +36,9 @@ my %WriteMakefileArgs = (
     "Dist::Zilla::App::Tester" => 0,
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "File::Spec::Functions" => 0,
-    "List::Util" => 0,
-    "Scalar::Util" => 0,
     "Test::More" => "0.89"
   },
-  "VERSION" => "2.000000",
+  "VERSION" => "2.000001",
   "test" => {
     "TESTS" => "t/*.t t/00-compile/*.t"
   }
@@ -57,11 +54,8 @@ my %FallbackPrereqs = (
   "Dist::Zilla::Role::MetaProvider::Provider" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "File::Spec::Functions" => 0,
-  "List::Util" => 0,
   "Module::Runtime" => 0,
   "Moose" => 0,
-  "Scalar::Util" => 0,
   "Test::More" => "0.89",
   "namespace::autoclean" => 0,
   "strict" => 0,
