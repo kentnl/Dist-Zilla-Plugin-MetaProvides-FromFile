@@ -1,6 +1,6 @@
 # NAME
 
-Dist::Zilla::Plugin::MetaProvides::FromFile - In the event nothing else works, pull in hand-crafted metadata from a specified file.
+Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted metadata from a specified file.
 
 # VERSION
 
@@ -8,9 +8,11 @@ version 2.000001
 
 # SYNOPSIS
 
-For a general overview of the `MetaProvides` family, see [Dist::Zilla::Plugin::**MetaProvides**](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
+For a general overview of the `MetaProvides` family, see
+[Dist::Zilla::Plugin::**MetaProvides**](https://metacpan.org/pod/Dist::Zilla::Plugin::MetaProvides)
 
-This module is tailored to the situation where probing various files for `provides` data is not possible, and you just want to declare some in an external file.
+This module is tailored to the situation where probing various files for `provides` data is not possible, and you just want to
+declare some in an external file.
 
     [MetaProvides::FromFile]
     inherit_version = 0         ; optional, default = 1
