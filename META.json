@@ -104,9 +104,10 @@
             "Test::More" : "1.001003"
          },
          "requires" : {
-            "Dist::Zilla::App::Tester" : "0",
+            "Dist::Zilla::Util::Test::KENTNL" : "1.003001",
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
+            "Test::DZil" : "0",
             "Test::More" : "0.89"
          }
       }
@@ -136,7 +137,6 @@
          "Carp" : "1.34",
          "Config::INI::Reader" : "0.024",
          "Dist::Zilla::App::Command::bakeini" : "0.001002",
-         "Dist::Zilla::App::Tester" : "5.020",
          "Dist::Zilla::MetaProvides::ProvideRecord" : "2.001001",
          "Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes" : "0.003001",
          "Dist::Zilla::Plugin::Authority" : "1.006",
@@ -186,6 +186,7 @@
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.020000",
          "Dist::Zilla::Role::MetaProvider::Provider" : "2.001001",
          "Dist::Zilla::Util::ConfigDumper" : "0.003004",
+         "Dist::Zilla::Util::Test::KENTNL" : "1.003001",
          "ExtUtils::MakeMaker" : "6.98",
          "File::Spec" : "3.49",
          "Module::Runtime" : "0.014",
@@ -193,6 +194,7 @@
          "Pod::Coverage::TrustPod" : "0.100003",
          "Test::CPAN::Changes" : "0.30",
          "Test::CPAN::Meta" : "0.23",
+         "Test::DZil" : "5.020",
          "Test::Kwalitee" : "1.22",
          "Test::More" : "1.001003",
          "Test::Pod" : "1.48",
