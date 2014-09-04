@@ -5,7 +5,7 @@ use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '2.001000';
+our $VERSION = '2.001001';
 
 # ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
