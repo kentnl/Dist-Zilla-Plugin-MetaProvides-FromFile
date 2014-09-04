@@ -5,17 +5,18 @@ use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '2.000002';
+our $VERSION = '2.001000';
 
 # ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
 # AUTHORITY
 
-use Moose qw( with has );
+use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
 use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
+use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
 =head1 ROLES
 
@@ -55,6 +56,8 @@ has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Re
 =cut
 
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
+
+around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
 
 =head1 ROLE SATISFYING METHODS
 
