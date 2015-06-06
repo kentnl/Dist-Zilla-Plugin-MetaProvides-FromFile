@@ -86,7 +86,7 @@ It can be substituted by any class name that matches the following criteria
 
 ## reader\_name
 
-### type: ClassName, ro.
+### type: Str, ro.
 
 ### default: Config::INI::Reader
 

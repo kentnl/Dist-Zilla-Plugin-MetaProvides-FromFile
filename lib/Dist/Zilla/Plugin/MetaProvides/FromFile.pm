@@ -14,7 +14,6 @@ our $VERSION = '2.001001';
 use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
-use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
@@ -39,13 +38,13 @@ has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 =head2 reader_name
 
-=head3 type: ClassName, ro.
+=head3 type: Str, ro.
 
 =head3 default: Config::INI::Reader
 
 =cut
 
-has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
+has reader_name => ( isa => 'Str', is => 'ro', default => 'Config::INI::Reader', );
 
 =head1 PRIVATE PLUGIN FIELDS
 
