@@ -1,11 +1,10 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '2.001000';
+our $VERSION = '2.001001';
 
 # ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
@@ -14,7 +13,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
-use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
@@ -45,7 +43,7 @@ has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 
 
-has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
+has reader_name => ( isa => 'Str', is => 'ro', default => 'Config::INI::Reader', );
 
 
 
@@ -58,6 +56,9 @@ has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Re
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
 around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
+
+__PACKAGE__->meta->make_immutable;
+no Moose;
 
 
 
@@ -96,10 +97,6 @@ sub _build__reader {
   require_module( $self->reader_name );
   return $self->reader_name->new();
 }
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
-
 1;
 
 __END__
@@ -114,7 +111,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted metadata from
 
 =head1 VERSION
 
-version 2.001000
+version 2.001001
 
 =head1 SYNOPSIS
 
@@ -200,7 +197,7 @@ It can be substituted by any class name that matches the following criteria
 
 =head2 reader_name
 
-=head3 type: ClassName, ro.
+=head3 type: Str, ro.
 
 =head3 default: Config::INI::Reader
 
@@ -238,7 +235,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric.
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
