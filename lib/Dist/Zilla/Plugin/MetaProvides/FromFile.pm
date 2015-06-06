@@ -58,6 +58,9 @@ has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
 around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 =head1 ROLE SATISFYING METHODS
 
 =head2 provides
@@ -95,10 +98,6 @@ sub _build__reader {
   require_module( $self->reader_name );
   return $self->reader_name->new();
 }
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
-
 1;
 
 =head1 SYNOPSIS
