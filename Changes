@@ -1,6 +1,6 @@
 ﻿Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
-2.001001 2015-06-06T13:36:43Z 336bc89
+2.001001 2015-06-06T13:39:39Z f6c555d
  [Bugs]
  - Make reader_name a string because ClassName requires it to be loaded, but we internally load things. Closes #1.
    Thanks PJFL for reporting.
@@ -9,7 +9,7 @@
  - Dependencies changed since 2.001000, see misc/*.deps* for details
  - configure: +1 (recommends: ↑1)
  - develop: +9 ↑3 -2 (recommends: +1, suggests: ↑2)
- - runtime: (recommends: +1)
+ - runtime: ↓1 -1 (recommends: +1)
  - test: +1 (recommends: ↑1 ↓1)
 
 2.001000 2014-09-04T18:28:48Z
