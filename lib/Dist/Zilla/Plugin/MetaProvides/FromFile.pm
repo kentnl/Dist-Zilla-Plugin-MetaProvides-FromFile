@@ -1,7 +1,6 @@
-use 5.008;    # utf8
+use 5.006;
 use strict;
 use warnings;
-use utf8;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
@@ -58,6 +57,9 @@ has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
 around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
 
+__PACKAGE__->meta->make_immutable;
+no Moose;
+
 
 
 
@@ -95,10 +97,6 @@ sub _build__reader {
   require_module( $self->reader_name );
   return $self->reader_name->new();
 }
-
-__PACKAGE__->meta->make_immutable;
-no Moose;
-
 1;
 
 __END__
