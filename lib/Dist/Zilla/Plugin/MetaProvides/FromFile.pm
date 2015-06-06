@@ -14,7 +14,6 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
-use Config::INI::Reader ();
 use Dist::Zilla::MetaProvides::ProvideRecord;
 use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
@@ -45,7 +44,7 @@ has file => ( isa => 'Str', is => 'ro', required => 1, );
 
 
 
-has reader_name => ( isa => 'ClassName', is => 'ro', default => 'Config::INI::Reader', );
+has reader_name => ( isa => 'Str', is => 'ro', default => 'Config::INI::Reader', );
 
 
 
@@ -200,7 +199,7 @@ It can be substituted by any class name that matches the following criteria
 
 =head2 reader_name
 
-=head3 type: ClassName, ro.
+=head3 type: Str, ro.
 
 =head3 default: Config::INI::Reader
 
