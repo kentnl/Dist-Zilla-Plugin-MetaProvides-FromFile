@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '2.001001';
+our $VERSION = '2.001002';
 
 # ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
@@ -111,7 +111,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted metadata from
 
 =head1 VERSION
 
-version 2.001001
+version 2.001002
 
 =head1 SYNOPSIS
 

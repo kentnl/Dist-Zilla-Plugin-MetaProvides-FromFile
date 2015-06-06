@@ -22,7 +22,7 @@ name: Dist-Zilla-Plugin-MetaProvides-FromFile
 provides:
   Dist::Zilla::Plugin::MetaProvides::FromFile:
     file: lib/Dist/Zilla/Plugin/MetaProvides/FromFile.pm
-    version: '2.001001'
+    version: '2.001002'
 recommends:
   Moose: '2.000'
 requires:
@@ -42,7 +42,7 @@ resources:
   bugtracker: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile/issues
   homepage: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile
   repository: https://github.com/kentnl/Dist-Zilla-Plugin-MetaProvides-FromFile.git
-version: '2.001001'
+version: '2.001002'
 x_BuiltWith:
   external_file: misc/built_with.json
 x_Dist_Zilla:
@@ -426,7 +426,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 2.001001-source
+          tag: 2.001002-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -480,7 +480,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: 0
-          tag: '2.001001'
+          tag: '2.001002'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
