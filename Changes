@@ -1,6 +1,8 @@
 ﻿Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+2.001001 2015-06-06T13:39:39Z f6c555d
  [Bugs]
  - Make reader_name a string because ClassName requires it to be loaded, but we internally load things. Closes #1.
    Thanks PJFL for reporting.
