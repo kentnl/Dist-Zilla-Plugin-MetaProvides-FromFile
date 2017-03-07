@@ -14,7 +14,6 @@ use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
 use Dist::Zilla::MetaProvides::ProvideRecord;
-use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
 =head1 ROLES
 
@@ -55,7 +54,19 @@ has reader_name => ( isa => 'Str', is => 'ro', default => 'Config::INI::Reader',
 
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
-around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
+around dump_config => sub {
+  my ( $orig, $self, @args ) = @_;
+  my $config = $self->$orig(@args);
+  my $localconf = $config->{ +__PACKAGE__ } = {};
+
+  $localconf->{file}        = $self->file;
+  $localconf->{reader_name} = $self->reader_name;
+
+  $localconf->{ q[$] . __PACKAGE__ . '::VERSION' } = $VERSION
+    unless __PACKAGE__ eq ref $self;
+
+  return $config;
+};
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
