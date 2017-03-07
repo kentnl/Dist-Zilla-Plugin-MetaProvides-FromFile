@@ -1,5 +1,7 @@
 Revision history for Dist-Zilla-Plugin-MetaProvides-FromFile
 
+2.001003 2017-03-07T14:17:31Z cf5baa9
+
 2.001002 2017-03-07T14:15:57Z 91340b1
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Removed use of ConfigDumper

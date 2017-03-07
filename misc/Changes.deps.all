@@ -1,6 +1,8 @@
 This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL dependencies for all phases (configure/build/runtime/test/develop)
 
-2.001002
+2.001003
+
+2.001002 2017-03-07T14:15:57Z
  [Added / develop requires]
  - Dist::Zilla::Plugin::MetaYAML::Minimal
  - Dist::Zilla::Plugin::RemovePrereqs::Provided
