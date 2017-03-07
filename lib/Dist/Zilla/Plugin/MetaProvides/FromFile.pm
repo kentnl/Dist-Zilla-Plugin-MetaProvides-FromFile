@@ -4,7 +4,7 @@ use warnings;
 
 package Dist::Zilla::Plugin::MetaProvides::FromFile;
 
-our $VERSION = '2.001001';
+our $VERSION = '2.001002';
 
 # ABSTRACT: Pull in hand-crafted metadata from a specified file.
 
@@ -14,7 +14,6 @@ use Moose qw( with has around );
 use Carp ();
 use Module::Runtime qw( require_module );
 use Dist::Zilla::MetaProvides::ProvideRecord;
-use Dist::Zilla::Util::ConfigDumper qw( config_dumper );
 
 
 
@@ -55,7 +54,19 @@ has reader_name => ( isa => 'Str', is => 'ro', default => 'Config::INI::Reader',
 
 has _reader => ( isa => 'Object', is => 'ro', lazy_build => 1, );
 
-around dump_config => config_dumper( __PACKAGE__, qw( file reader_name ) );
+around dump_config => sub {
+  my ( $orig, $self, @args ) = @_;
+  my $config = $self->$orig(@args);
+  my $localconf = $config->{ +__PACKAGE__ } = {};
+
+  $localconf->{file}        = $self->file;
+  $localconf->{reader_name} = $self->reader_name;
+
+  $localconf->{ q[$] . __PACKAGE__ . '::VERSION' } = $VERSION
+    unless __PACKAGE__ eq ref $self;
+
+  return $config;
+};
 
 __PACKAGE__->meta->make_immutable;
 no Moose;
@@ -111,7 +122,7 @@ Dist::Zilla::Plugin::MetaProvides::FromFile - Pull in hand-crafted metadata from
 
 =head1 VERSION
 
-version 2.001001
+version 2.001002
 
 =head1 SYNOPSIS
 
@@ -235,7 +246,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
