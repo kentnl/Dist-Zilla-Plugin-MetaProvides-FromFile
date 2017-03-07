@@ -3,7 +3,6 @@ abstract: 'Pull in hand-crafted metadata from a specified file.'
 author:
   - 'Kent Fredric <kentnl@cpan.org>'
 build_requires:
-  Dist::Zilla::Util::Test::KENTNL: '1.003001'
   ExtUtils::MakeMaker: '0'
   File::Spec: '0'
   Test::DZil: '0'
@@ -31,7 +30,6 @@ requires:
   Dist::Zilla::MetaProvides::ProvideRecord: '0'
   Dist::Zilla::Plugin::MetaProvides: '1.11034201'
   Dist::Zilla::Role::MetaProvider::Provider: '0'
-  Dist::Zilla::Util::ConfigDumper: '0'
   Module::Runtime: '0'
   Moose: '0'
   namespace::autoclean: '0'
