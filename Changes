@@ -3,12 +3,13 @@
 {{$NEXT}}
  - Bugfix: Avoid test failures with -Ddefault_inc_excludes_dot
  - Removed use of ConfigDumper
+ - Removed use of dztest
 
  [Dependencies::Stats]
  - Dependencies changed since 2.001001, see misc/*.deps* for details
  - develop: +5 ↑2 -1 (suggests: ↑2)
  - runtime: -1
- - test: ↓1
+ - test: ↓1 -1
 
 2.001001 2015-06-06T13:39:39Z f6c555d
  [Bugs]
